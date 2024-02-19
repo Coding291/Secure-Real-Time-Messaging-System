@@ -1,0 +1,23 @@
+Êþº¾   1 e  Client/ErrorBoxGUI  java/lang/Object errorMessage Ljava/lang/String; display !Lorg/eclipse/swt/widgets/Display; shell Lorg/eclipse/swt/widgets/Shell; <init> (Ljava/lang/String;)V Code
+     ()V  org/eclipse/swt/widgets/Shell	    
+     $(Lorg/eclipse/swt/widgets/Display;)V	   	 
+	     LineNumberTable LocalVariableTable this LClient/ErrorBoxGUI; open " java/lang/Thread $ Client/ErrorBoxGUI$1
+ # &  ' (LClient/ErrorBoxGUI;)V
+ ! )  * (Ljava/lang/Runnable;)V
+ ! , -  start close
+  0 .  createContents 
+ 3 5 4 org/eclipse/swt/widgets/Display 6 7 
+getDefault #()Lorg/eclipse/swt/widgets/Display; 9 "org/eclipse/swt/widgets/MessageBox
+ 8 ;  < #(Lorg/eclipse/swt/widgets/Shell;I)V
+ 8 > ?  
+setMessage
+ 8 A   B ()I	 D F E java/lang/System G H out Ljava/io/PrintStream; J SWT.OK
+ L N M java/io/PrintStream O  println Q 
+SWT.CANCEL S SWT.YES U SWT.NO W 	SWT.RETRY Y 	SWT.ABORT [ 
+SWT.IGNORE
+  0 style I 
+messageBox $Lorg/eclipse/swt/widgets/MessageBox; rc 
+SourceFile ErrorBoxGUI.java InnerClasses !                    	 
+           Y     *· *» Y*´ · µ *+µ ±                                            E     » !Y» #Y*· %· (¶ +±             '  )              .      6     *´ ¶ /±       
+    ,  -              1     O     ·*¸ 2µ <» 8Y*´ · :M,*´ ¶ =,¶ @>«      Ž          D   @   Z   €   e      O      {      p      †² CI¶ K§ B² CP¶ K§ 7² CR¶ K§ ,² CT¶ K§ !² CV¶ K§ ² CX¶ K§ ² CZ¶ K*¶ \±       V    0  1 	 3  4  5 # 6 h 8 p 9 s ; { < ~ > † ? ‰ A ‘ B ” D œ E Ÿ G § H ª J ² M ¶ N    *    ·     	 ® ] ^   ¡ _ `  # ” a ^   b    c d   
+  #      

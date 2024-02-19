@@ -1,0 +1,37 @@
+ ˛∫æ   1 ¢  Client/UsernameGUI  java/lang/Object eBX LClient/ErrorBoxGUI; shell Lorg/eclipse/swt/widgets/Shell; username Lorg/eclipse/swt/widgets/Text; client LClient/Client; <init> (LClient/Client;)V Code
+     ()V  Client/ErrorBoxGUI  You need to Type a Username
+     (Ljava/lang/String;)V	    	     LineNumberTable LocalVariableTable this LClient/UsernameGUI; c close	  %  
+ ' ) ( org/eclipse/swt/widgets/Shell #  open
+ , . - org/eclipse/swt/widgets/Display / 0 
+getDefault #()Lorg/eclipse/swt/widgets/Display;
+  2 3  createContents
+ ' 5 *  
+ ' 7 8  layout
+ , : ; < readAndDispatch ()Z
+ , > ? < sleep
+ ' A B < 
+isDisposed display !Lorg/eclipse/swt/widgets/Display;
+ ' F  G %(Lorg/eclipse/swt/widgets/Display;I)V I Client/UsernameGUI$1
+ H K  L (LClient/UsernameGUI;)V
+ ' N O P addShellListener )(Lorg/eclipse/swt/events/ShellListener;)V
+ ' R S T setSize (II)V V Username
+ ' X Y  setText [ !org/eclipse/swt/layout/GridLayout
+ Z ]  ^ (IZ)V
+ ' ` a b 	setLayout #(Lorg/eclipse/swt/widgets/Layout;)V d org/eclipse/swt/widgets/Label
+ c f  g '(Lorg/eclipse/swt/widgets/Composite;I)V i org/eclipse/swt/layout/GridData      
+ h m  n 	(IIZZII)V
+ c p q r setLayoutData (Ljava/lang/Object;)V t 	Username:
+ c X w org/eclipse/swt/widgets/Text
+ v f	  z 	 
+ | Client/UsernameGUI$2
+ { K
+ v  Ä Å addKeyListener '(Lorg/eclipse/swt/events/KeyListener;)V
+ v p Ñ org/eclipse/swt/widgets/Button
+ É f á Client/UsernameGUI$3
+ Ü K
+ É ä ã å addSelectionListener -(Lorg/eclipse/swt/events/SelectionListener;)V	 h é è ê 	widthHint I
+ É p ì Chose
+ É X lblUsername Lorg/eclipse/swt/widgets/Label; btnUsernameChose  Lorg/eclipse/swt/widgets/Button; gd_btnUsernameChose !Lorg/eclipse/swt/layout/GridData; access$0 4(LClient/UsernameGUI;)Lorg/eclipse/swt/widgets/Text; access$1 %(LClient/UsernameGUI;)LClient/Client; 
+SourceFile UsernameGUI.java InnerClasses !                 	 
+                W     *∑ *ª Y∑ µ *+µ ±                            !      "    #      6     *¥ $∂ &±       
+       !           !    *      Ñ     0∏ +L*∂ 1*¥ $∂ 4*¥ $∂ 6ß +∂ 9ö +∂ =W*¥ $∂ @ôˇÌ±       & 	   $  %  &  '  (  )   * % ( / -        0   !    , C D   3     i 	    ›*ª 'Y∏ +`∑ Eµ $*¥ $ª HY*∑ J∂ M*¥ $¬d∂ Q*¥ $U∂ W*¥ $ª ZY∑ \∂ _ª cY*¥ $∑ eL+ª hYjk∑ l∂ o+s∂ u*ª vY*¥ $ ∑ xµ y*¥ yª {Y*∑ }∂ ~*¥ yª hYk∑ l∂ Çª ÉY*¥ $∑ ÖM,ª ÜY*∑ à∂ âª hY@ k∑ lN-®µ ç,-∂ ë,í∂ î±       J    4  5  = + > 4 ? D A Q B d C j D | E ã V † X ≠ Y π g   h — i ÷ j ‹ l    *    ›   !   Q å ï ñ  ≠ 0 ó ò     ô ö  õ ú     %     *¥ y∞                  ù û     %     *¥ ∞                   ü    † °     H       {       Ü      

@@ -1,0 +1,33 @@
+ ˛∫æ   1 ¬  Client/CommunicationHandler  java/lang/Thread isActive Ljava/lang/Boolean; userList Ljava/util/ArrayList; 	Signature )Ljava/util/ArrayList<Ljava/lang/String;>; message s Ljava/net/Socket; s_out Ljava/io/PrintWriter; s_in Ljava/io/BufferedReader; response Ljava/lang/String; client LClient/Client; isConnected <init> ()V Code
+     
+    java/lang/Boolean   ! valueOf (Z)Ljava/lang/Boolean;	  #   % java/util/ArrayList
+ $ 	  (  	  *   , java/net/Socket
+ + 	  /  	  1  	  3   5  	  7  	  9  
+  ; <  start LineNumberTable LocalVariableTable this LClient/CommunicationHandler; run C Client/Client
+ B E  F  (LClient/CommunicationHandler;)V	  H  
+  J K L getIsConnected ()Ljava/lang/Boolean;
+  N O P booleanValue ()Z R /GAU
+ T V U java/lang/String W X equals (Ljava/lang/Object;)Z	 Z \ [ java/lang/System ] ^ out Ljava/io/PrintStream; ` TEST Userlist
+ b d c java/io/PrintStream e f println (Ljava/lang/String;)V
+  h i j setUserList )(Ljava/lang/String;)Ljava/util/ArrayList; l java/lang/StringBuilder n 	Response:
+ k p  f
+ k r s t append -(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+ k v w x toString ()Ljava/lang/String;
+ B z { | updateUserListChatGUI (Ljava/util/ArrayList;)V ~ [END]
+ T Ä Å Ç contains (Ljava/lang/CharSequence;)Z
+ Ñ Ü Ö java/io/BufferedReader á x readLine â /M
+ B ã å f updateMessageChatGUI é Message Test
+ ê í ë java/lang/Exception ì  printStackTrace uList messageResponse e Ljava/lang/Exception; =(Ljava/lang/String;)Ljava/util/ArrayList<Ljava/lang/String;>; ö :
+ T ú ù û split '(Ljava/lang/String;)[Ljava/lang/String;
+ † ¢ ° java/util/Arrays £ § asList %([Ljava/lang/Object;)Ljava/util/List;
+ $ ¶  ß (Ljava/util/Collection;)V
+ $ © ™ X remove rspUserList parts LocalVariableTypeTable setIsConnected (Ljava/lang/Boolean;)V getS ()Ljava/net/Socket; setS (Ljava/net/Socket;)V getS_out ()Ljava/io/PrintWriter; setS_out (Ljava/io/PrintWriter;)V getS_in ()Ljava/io/BufferedReader; setS_in (Ljava/io/BufferedReader;)V 	getClient ()LClient/Client; 	setClient (LClient/Client;)V 
+SourceFile CommunicationHandler.java !     	          	    
+     	    
+                                       ú     J*∑ *∏ µ "*ª $Y∑ &µ '*ª $Y∑ &µ )*ª +Y∑ -µ .*µ 0*µ 2*4µ 6*∏ µ 8*∑ :±    =   .           "  -  2  7  =  E  I  >       J ? @    A     w     ≈*ª BY*∑ Dµ Gß ¶*∂ I∂ Mô úß ä*¥ 6Q∂ Sô Vß D≤ Y_∂ a**+∂ gµ '≤ Yª kYm∑ o*¥ '∂ q∂ u∂ a*¥ G*¥ '∂ y+}∂ ô ß :*¥ 2∂ ÉYL«ˇ∂ß +*¥ 6à∂ Sô *¥ 2∂ ÉYL∆ *¥ G+∂ ä≤ Yç∂ a**¥ 2∂ ÉZµ 6«ˇm*¥ "∂ MöˇVß L+∂ è±    º ø ê  =   ^    "  #  $  %  & ( ( + ) 3 * < + U , ` - i . l ( x 1 { 2 á 4 ì 5 õ 8 £ % ≤ # º = ¿ > ƒ @ >   4    ≈ ? @   + A î   u  î   ê  ï   ¿  ñ ó   i j  	    ò    r     ª $Y+ô∂ õ∏ ü∑ •M,}∂ ®W,∞    =       C  D  E >         ? @      ´    	 ¨   ≠      	 ¨ 
+  ! K L     /     *¥ 8∞    =       I >        ? @   ! Æ Ø     >     *+µ 8±    =   
+    M  N >        ? @         ! ∞ ±     /     *¥ .∞    =       Q >        ? @   ! ≤ ≥     >     *+µ .±    =   
+    U  V >        ? @         ! ¥ µ     /     *¥ 0∞    =       Y >        ? @   ! ∂ ∑     >     *+µ 0±    =   
+    ]  ^ >        ? @         ! ∏ π     /     *¥ 2∞    =       a >        ? @   ! ∫ ª     >     *+µ 2±    =   
+    e  f >        ? @         ! º Ω     /     *¥ G∞    =       i >        ? @   ! æ ø     >     *+µ G±    =   
+    m  n >        ? @          ¿    ¡
